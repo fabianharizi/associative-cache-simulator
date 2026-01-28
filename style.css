@@ -1,0 +1,49 @@
+@import "./main.css";
+
+/* PAGE-SPECIFIC STYLES FOR LANDING PAGE */
+.landing-container {
+  max-width: 900px;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}

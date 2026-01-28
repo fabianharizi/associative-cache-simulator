@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fully-Associative Cache Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Fully-Associative Cache Simulator</h1>
+
+    <!-- HOW TO USE -->
+    <div class="how-to-use">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Enter a memory address (decimal).</li>
+        <li>Click <strong>Access Memory</strong>.</li>
+        <li>The address is converted to binary below.</li>
+        <li>Any address can go into any cache line.</li>
+        <li>If cache is full, <strong>Random Replacement</strong> is used.</li>
+        <li>Green = Hit, Red = Miss.</li>
+      </ol>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+      <label>Memory Address:</label>
+      <input type="number" id="memoryAddress" min="0" />
+      
+      <label>Replacement Policy:</label>
+      <select id="policy">
+        <option value="Random">Random</option>
+      </select>
+
+      <button id="accessMemory">Access Memory</button>
+    </div>
+
+    <p id="binaryDisplay">Binary Address: -</p>
+
+    <!-- CACHE TABLE -->
+    <h2>Cache Status</h2>
+    <table id="cacheTable">
+      <thead>
+        <tr>
+          <th>Cache Line (bits)</th>
+          <th>Tag</th>
+          <th>Data</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p id="resultText">Waiting for memory access...</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+/* ===== HEADER STYLES ===== */
+.main-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1000;
+  margin-bottom: 50px;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-link {
+  text-decoration: none; /* no underline */
+  color: inherit;         /* inherit color from text */
+  display: inline-block;  /* so h1 + p stay together */
+}
+
+.header-link:hover {
+  opacity: 0.8;           /* subtle hover effect */
+}
+
+.title-block h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.title-block p {
+  margin: 3px 0 0;
+  font-size: 12.5px;
+  color: #666;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+}
+
+.nav-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+.active-link {
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-weight: 500;
+  color: #333;
+}
+
+.controls input,
+.controls select {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ===== TABLE STYLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #ecf0f1;
+  font-weight: 600;
+}
+
+tr.hit td {
+  background-color: #2ecc71;
+  color: white;
+}
+
+tr.miss td {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* ===== HOW TO USE SECTION ===== */
+.how-to-use {
+  background: #f9f9f9;
+  border-left: 4px solid #3498db;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.how-to-use h2 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.how-to-use ol {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+  color: #555;
+}
+
+.how-to-use li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* ===== STATUS COLORS ===== */
+.hit-color {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.miss-color {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 13px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 60px;
+  }
+}
