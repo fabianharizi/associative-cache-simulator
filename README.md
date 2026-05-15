@@ -1,93 +1,64 @@
-# 🧠 Associative Cache Memory Simulator
+# Cache Memory Simulator
 
-An interactive web-based simulator for understanding **cache memory architectures** in Computer Organization and Architecture.
-
-This project demonstrates how different cache mapping techniques work visually and step-by-step.
+An interactive, browser-based simulator for exploring cache memory architectures. Built for the Computer Organization and Architecture course at FSHN — Faculty of Natural Sciences, Department of Informatics.
 
 ---
 
-## 👨‍🎓 Academic Context
+## Overview
 
-**Built by:** Fabian Harizi  
+This simulator visualizes how three fundamental cache mapping techniques work under the hood — step by step, access by access. Designed to make abstract concepts tangible for students learning computer architecture.
+
+## Cache architectures
+
+| Type | Description |
+|------|-------------|
+| Direct-mapped | Each memory block maps to exactly one cache line |
+| Fully associative | Any block can be placed in any cache line |
+| Set associative | Cache is divided into sets; a block maps to one set but any line within it |
+
+## Features
+
+- Decimal memory address input with binary conversion
+- Tag and index/set bit breakdown displayed per access
+- Cache hit / miss detection with visual highlighting
+- Step-by-step cache state after every memory access
+- Random replacement policy (where applicable)
+
+## Usage
+
+1. Open any simulator page
+2. Enter a memory address
+3. Click **Access Memory**
+4. Observe the binary address, tag/index breakdown, hit or miss result, and updated cache state
+
+## Learning goals
+
+- Cache mapping strategies (direct, fully associative, set associative)
+- Memory address decomposition (tag / index / offset)
+- Replacement policies
+- Spatial locality and cache behavior across multiple accesses
+
+## Tech stack
+
+- HTML5 / CSS3
+- Vanilla JavaScript
+- DOM manipulation — no dependencies
+
+## Possible extensions
+
+- LRU and FIFO replacement policies
+- Block size greater than one word
+- Hit rate and performance metrics
+- Animation of data movement between memory and cache
+- Side-by-side comparison mode across cache types
+
+## Academic context
+
+**Author:** Fabian Harizi  
 **Course:** Organizim Kompjuteri dhe Arkitekturë  
-**Faculty:** FSHN  
+**Faculty:** FSHN — Fakulteti i Shkencave të Natyrës  
 **Department:** Informatikë  
 
 ---
 
-## 🚀 Features
-
-This simulator includes **three cache architectures**:
-
-| Cache Type | Description |
-|-----------|------------|
-| **Direct-Mapped Cache** | Each memory block maps to exactly one cache line. |
-| **Fully-Associative Cache** | Any block can be stored in any cache line. |
-| **Set-Associative Cache** | Cache divided into sets; block maps to one set but any line inside it. |
-
----
-
-## 🎯 What the Simulator Shows
-
-- Memory address input (decimal)
-- Conversion of memory address → **binary**
-- Cache line indices displayed in **bit format**
-- Tag calculation
-- Cache Hit / Miss detection
-- Visual highlighting of affected cache lines
-- Random replacement (where applicable)
-- Step-by-step state of the cache after every access
-
----
-
-## 🧩 How to Use
-
-1. Open any simulator page.
-2. Enter a **memory address**.
-3. Click **Access Memory**.
-4. Observe:
-   - Binary address
-   - Tag & index/set breakdown
-   - Cache hit or miss
-   - Updated cache state
-
----
-
-## 🧪 Learning Goals
-
-This tool helps visualize:
-
-- Cache mapping strategies
-- Address breakdown (Tag / Index / Set)
-- Replacement policies
-- Spatial locality
-- Cache behavior over multiple accesses
-
----
-
-## 💻 Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- DOM manipulation
-
----
-
-## 📸 Possible Extensions
-
-- LRU / FIFO replacement
-- Block size > 1 word
-- Performance metrics (hit rate)
-- Animation of data movement
-- Side-by-side comparison of cache types
-
----
-
-## 📜 License
-
-This project is for **educational purposes**.
-
----
-
-✨ Designed as a teaching & learning tool for Computer Architecture.
+*Built as a teaching and learning tool for Computer Architecture. For educational use.*
